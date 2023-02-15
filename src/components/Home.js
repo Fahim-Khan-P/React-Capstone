@@ -1,19 +1,24 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, {useEffect} from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import Navbar from './Navbar';
+import Europe from './Europ';
+import CountryList from './CountryList';
+import { fetchCountries } from '../Redux/countries';
 
-const Home = ({
-  color, name, population, flag,
-}) => (
-  <div className={`homeCard ${color[0]}`}>
-    <div className="homeCardTop">
-      <i className="fa-regular fa-circle-right cardIcon" />
-      <img className="homeCardTopImg" src={flag} alt={name} />
+const Home = () => {
+  const { countries } = useSelector((state) => state.countries);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchCountries());
+  }, []);
+  return (
+    <div className="homeScreen">
+      <Navbar />
+      <Europe />
+      <CountryList data={countries} />
     </div>
-    <div className="homeCardBottom">
-      <p className="homeCardTitle">{name}</p>
-      <p className="homeCardNumber">{`${Math.round(population / 1000000)} M`}</p>
-    </div>
-  </div>
-);
+  );
+};
 
 export default Home;
