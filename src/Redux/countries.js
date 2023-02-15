@@ -2,14 +2,17 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const URL = 'https://restcountries.com/v3.1/region/europe';
+const baseUrl = 'https://restcountries.com/v3.1/region/europe';
 
 export const fetchCountries = createAsyncThunk(
-  'fetchCountries',
+  'countries/fetchCountries',
   async () => {
-    const res = await axios.get(URL);
-    console.log(res.data);
-    return res;
+    try {
+      const response = axios.get(baseUrl);
+      return response;
+    } catch (error) {
+      return error;
+    }
   },
 );
 
@@ -18,9 +21,11 @@ const initialState = {
   loading: 'idle',
 };
 
-export const countriesSlice = createSlice({
+export const homeSlice = createSlice({
   name: 'countries',
   initialState,
+  reducers: {
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchCountries.fulfilled, (state, action) => {
       state.countries = action.payload.data;
@@ -29,4 +34,4 @@ export const countriesSlice = createSlice({
   },
 });
 
-export default countriesSlice;
+export default homeSlice.reducer;

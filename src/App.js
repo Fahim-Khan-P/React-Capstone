@@ -1,21 +1,17 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-import Navbar from './components/Navbar';
-import Country from './components/Country';
+import Details from './components/Details';
 import './index.css';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div>
-        <Navbar>Most Views</Navbar>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/country" element={<Country />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <div className="App">
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/details:country" exact element={<Details />} />
+      </Routes>
+    </div>
   );
 }
 
