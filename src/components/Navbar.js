@@ -4,16 +4,15 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => (
   <div className="navBar">
-    <div className="navbar-right">
-      <i className="fa-solid fa-chevron-left" />
+    <div className="navbarLeftDiv">
       <Link to="/">
-        Back
+        <i className="fa-solid fa-chevron-left" />
       </Link>
     </div>
-    <div className="navbar-middle">
+    <h3 className="navbar-middle">
       Europian Countries
-    </div>
-    <div className="navbar-left">
+    </h3>
+    <div className="navbarRightDiv">
       <i className="fa-solid fa-microphone" />
       <i className="fa-solid fa-gear" />
     </div>

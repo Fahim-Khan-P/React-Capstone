@@ -1,13 +1,13 @@
 import React from 'react';
 
-const countryCard = ({ population, name, flag }) => (
+const countryCard = ({ region, name, flag }) => (
   <div className="one-country">
     <div>
-      <img src={flag} alt="Flag" />
+      <img className="flag" src={flag} alt="Flag" />
     </div>
-    <div>
+    <div className="countryCardDetails">
       <h3>{name}</h3>
-      <h4>{population}</h4>
+      <h4>{region}</h4>
     </div>
   </div>
 );

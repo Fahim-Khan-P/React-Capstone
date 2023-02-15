@@ -2,18 +2,16 @@
 import React from 'react';
 import Europ from '../assets/Europ.png';
 
-const Europe = ({ population = '746.4 Million', title = 'Europe' }) => (
+const Europe = () => (
   <div className="europeMainDiv">
     <div className="imageDiv">
-      <img className="europeImage" src={Europ} alt={Europe} />
+      <img className="europeImage" src={Europ} alt="Europe" />
     </div>
     <div className="europeDatialsDiv">
-      <p className="europeTitle">
-        {
-          title
-          }
-      </p>
-      <p className="europePopulation">{ population }</p>
+      <h1 className="euroh2eTitle">
+        Europe
+      </h1>
+      <p className="europePopulation">746.4 Million</p>
     </div>
   </div>
 );

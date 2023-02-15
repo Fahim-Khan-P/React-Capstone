@@ -1,18 +1,17 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Europe from './Europ';
 import { fetchCountry } from '../Redux/country';
 
 const Details = () => {
-  const { state } = useLocation();
   const dispatch = useDispatch();
-  const { country } = useSelector((state) => state.country);
+  const country = useSelector((state) => state.country);
   useEffect(() => {
-    dispatch(fetchCountry(state.capital));
+    dispatch(fetchCountry(country.capital));
   }, []);
-
+  console.log(country);
   return (
     <div className="detailsMainDiv">
       <Navbar country={country[0].name.common} />
