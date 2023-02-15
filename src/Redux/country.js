@@ -24,7 +24,7 @@ export const countrySlice = createSlice({
   name: 'country',
   initialState,
   extraReducers: (builder) => {
-    builder.addCase(fetchCountry.fulfilled, (state,action) => {
+    builder.addCase(fetchCountry.fulfilled, (state, action) => {
       state.country = action.payload;
       console.log(action.payload);
       state.loading = 'fulfilled';

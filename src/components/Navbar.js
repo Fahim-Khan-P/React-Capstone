@@ -5,17 +5,17 @@ import { Link } from 'react-router-dom';
 const Navbar = ({ country }) => (
   <div className="navBar">
     {country && (
-      <div className="navbar-right">
-        <i className="fa-solid fa-chevron-left" />
-        <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
+      <div className="navbarBack">
+        <Link to="/">
+          <i className="fa-solid fa-chevron-left" />
           Back
         </Link>
       </div>
     )}
-    <div className="navbar-middle">
-      {country ? `Countries/${country}` : 'South Asian Countries'}
+    <div className="navbarHeader">
+      {country ? `Countries/${country}` : 'Europian Countries'}
     </div>
-    <div className="navbar-left">
+    <div className="navbarRight">
       <i className="fa-solid fa-microphone" />
       <i className="fa-solid fa-gear" />
     </div>
