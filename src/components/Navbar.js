@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => (
+const Navbar = ({ country }) => (
   <div className="navBar">
     <div className="navbarLeftDiv">
       <Link to="/">
@@ -10,7 +10,7 @@ const Navbar = () => (
       </Link>
     </div>
     <h3 className="navbar-middle">
-      Europian Countries
+      {country ? `Countries/${country}` : 'Europian Countries'}
     </h3>
     <div className="navbarRightDiv">
       <i className="fa-solid fa-microphone" />

@@ -7,8 +7,10 @@ const baseUrl = 'https://restcountries.com/v3.1/capital';
 export const fetchCountry = createAsyncThunk(
   'country/fetchCountry',
   async (name) => {
+    console.log(name, 'name');
     try {
       const response = axios.get(`${baseUrl}/${name}`);
+      console.log(response, 'response');
       return response;
     } catch (error) {
       return error;
