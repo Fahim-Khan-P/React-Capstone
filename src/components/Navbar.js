@@ -10,7 +10,7 @@ const Navbar = ({ country }) => (
       </Link>
     </div>
     <h3 className="navbar-middle">
-      {country ? `Countries/${country}` : 'Europian Countries'}
+      {country ? `Country/${country}` : 'Europian Countries'}
     </h3>
     <div className="navbarRightDiv">
       <i className="fa-solid fa-microphone" />

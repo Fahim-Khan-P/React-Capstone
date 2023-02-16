@@ -82,6 +82,29 @@ i {
   width: 50vh;
 }
 
+.detailsMainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.detailsTop h1 {
+  text-align: center;
+}
+
+.info {
+  text-align: center;
+  align-self: center;
+}
+
+.detailsDivInfo {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  column-gap: 14vh;
+}
+
 @media only screen and (max-width: 500px) {
   .CountryList {
     display: grid;
