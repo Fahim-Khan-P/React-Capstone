@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/React-Capstone/static/css/main.8a04c500.css",
+    "main.js": "/React-Capstone/static/js/main.92e64d40.js",
+    "index.html": "/React-Capstone/index.html",
+    "main.8a04c500.css.map": "/React-Capstone/static/css/main.8a04c500.css.map",
+    "main.92e64d40.js.map": "/React-Capstone/static/js/main.92e64d40.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8a04c500.css",
+    "static/js/main.92e64d40.js"
+  ]
+}
