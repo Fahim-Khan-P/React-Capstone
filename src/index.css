@@ -105,6 +105,10 @@ i {
   column-gap: 14vh;
 }
 
+.searchInput {
+  width: 50%;
+}
+
 @media only screen and (max-width: 500px) {
   .CountryList {
     display: grid;

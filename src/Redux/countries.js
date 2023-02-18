@@ -16,6 +16,18 @@ export const fetchCountries = createAsyncThunk(
   },
 );
 
+export const searchCountry = createAsyncThunk(
+  'countries/searchCountry',
+  async () => {
+    try {
+      const response = axios.get(URL);
+      return response;
+    } catch (error) {
+      return error;
+    }
+  },
+);
+
 const initialState = {
   countries: [],
   loading: 'idle',
