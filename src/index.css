@@ -128,7 +128,6 @@ i {
   font-weight: bold;
 }
 
-
 @media only screen and (max-width: 500px) {
   .CountryList {
     display: grid;
