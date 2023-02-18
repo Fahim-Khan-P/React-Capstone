@@ -9,7 +9,6 @@ const Details = () => {
   const dispatch = useDispatch();
   const { state } = useLocation();
   const country = useSelector((state) => state.country.country);
-  console.log(country, 'country');
   useEffect(() => {
     dispatch(fetchCountry(state.capital));
   }, []);
