@@ -12,7 +12,7 @@ const CountryList = ({ data }) => {
     <div className="CountryListMainDiv">
       <div className="searchContainer">
         <input className="searchInput" type="text" value={searchValue} placeholder="Search a country" onChange={(e) => setSearchValue(e.target.value)} />
-        <button type="button" onClick={dispatch(searchCountry)}>
+        <button className="searchBtn" type="button" onClick={() => dispatch(searchCountry(searchValue))}>
           Search
         </button>
       </div>
