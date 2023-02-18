@@ -2,6 +2,7 @@ import React from 'react';
 
 const countryCard = ({ region, name, flag }) => (
   <div className="one-country">
+    <i className="fa-solid fa-arrow-right countryArrow" />
     <div>
       <img className="flag" src={flag} alt="Flag" />
     </div>
