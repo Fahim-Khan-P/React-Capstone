@@ -69,13 +69,13 @@ This is my capstone React/Redux project. I selected an API that gives me data on
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Live Demo Link]()
+[Live Demo Link](https://fahim-khan-p.github.io/React-Capstone/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📺 Presentation <a name="presentation"></a>
 
-[Presentation about this project]()
+[Presentation about this project](https://www.loom.com/share/3ddf202c349642e8b52e68757ff60ced)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
