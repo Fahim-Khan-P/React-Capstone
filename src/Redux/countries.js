@@ -22,7 +22,6 @@ export const searchCountry = createAsyncThunk(
   async (name) => {
     try {
       const response = axios.get(`${searchUrl}${name}`);
-      console.log(response);
       return response;
     } catch (error) {
       return error;
@@ -47,7 +46,6 @@ export const homeSlice = createSlice({
     });
 
     builder.addCase(searchCountry.fulfilled, (state, action) => {
-      console.log(action);
       state.countries = action.payload.data.slice(0, 10);
     });
   },

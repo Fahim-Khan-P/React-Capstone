@@ -1,6 +1,8 @@
 import React from 'react';
 
-const countryCard = ({ region, name, flag }) => (
+const countryCard = ({
+  region, name, flag, population,
+}) => (
   <div className="one-country">
     <i className="fa-solid fa-arrow-right countryArrow" />
     <div>
@@ -10,6 +12,7 @@ const countryCard = ({ region, name, flag }) => (
       <h3>{name}</h3>
       <h4>{region}</h4>
     </div>
+    <h4 className="populationValue">{`${population} People`}</h4>
   </div>
 );
 

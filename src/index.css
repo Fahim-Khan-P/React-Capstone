@@ -141,6 +141,11 @@ i {
   margin-bottom: 10px;
 }
 
+.populationValue {
+  align-self: flex-end;
+  margin: 10px;
+}
+
 @media only screen and (max-width: 500px) {
   .CountryList {
     display: grid;
